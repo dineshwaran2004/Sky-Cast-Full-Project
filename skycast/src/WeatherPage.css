@@ -1,0 +1,138 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Bitcount+Single:wght@100..900&family=Boldonse&family=Bungee&family=Changa+One:ital@0;1&family=Orbitron:wght@400..900&family=Phudu:wght@300..900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Slabo+27px&display=swap');
+
+
+
+.weather-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.city-title {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.city-title::first-letter{
+  color: yellow;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.time-select select {
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 30px;
+  font-size: 14px;
+  width: 1200px;
+}
+
+.main-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 1200px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.main-card:hover {
+  transform: scale(1.05);
+}
+
+.main-card h2 {
+  font-size: 50px;
+  margin: 10px 0;
+}
+
+.info-cards {
+  display: flex;
+  gap: 20px;
+}
+
+.info-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  width: 340px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+.back-btn {
+  align-self: flex-start;
+  padding: 8px 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.center {
+  padding: 40px;
+  text-align: center;
+}
+/* ---------------- MOBILE RESPONSIVE ---------------- */
+
+@media (max-width: 768px) {
+
+  .weather-container {
+    padding: 20px;
+  }
+
+  .city-title {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .main-card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .main-card h2 {
+    font-size: 36px;
+  }
+
+  .info-cards {
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+  .info-card {
+    width: 100%;
+  }
+
+  .time-select select {
+    width: 100%;
+  }
+
+  .back-btn {
+    align-self: flex-start;
+    font-size: 14px;
+  }
+
+}
